@@ -1,0 +1,6 @@
+*
+!/.SECRETS
+!/.boto
+!/.config
+!/.config/git/*
+!/.extra
