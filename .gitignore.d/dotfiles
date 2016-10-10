@@ -1,0 +1,17 @@
+*
+!/.aliases
+!/.bash_profile
+!/.bashrc
+!/.colordiffrc
+!/.exports
+!/.functions
+!/.zprofile
+!/.zshenv
+!/.zshrc
+!/.config
+!/.config/liquidpromptrc
+!/.config/dotfiles
+!/.config/dotfiles/*
+!/.config/oh-my-zsh
+!/.config/oh-my-zsh/themes
+!/.config/oh-my-zsh/themes/*
