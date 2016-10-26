@@ -192,3 +192,6 @@ dum-st = diff --name-status upstream/master
 #	log = diff-highlight | less
 #	show = diff-highlight | less
 #	diff = diff-highlight | less
+
+#[commit]
+#	gpgSign = true

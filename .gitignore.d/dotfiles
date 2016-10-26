@@ -9,9 +9,13 @@
 !/.zshenv
 !/.zshrc
 !/.config
-!/.config/liquidpromptrc
+!/.config/*
+/.config/hub
 !/.config/dotfiles
 !/.config/dotfiles/*
+!/.config/git
+!/.config/git/*
 !/.config/oh-my-zsh
 !/.config/oh-my-zsh/themes
 !/.config/oh-my-zsh/themes/*
+!/.extra
