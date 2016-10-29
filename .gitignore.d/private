@@ -3,8 +3,9 @@
 !/.boto
 !/.config
 !/.config/*
-!/.config/dotfiles
-!/.config/dotfiles/*
 !/.config/git
 !/.config/git/*
+/.config/git/attributes
+/.config/git/ignore
+/.config/liquidpromptrc
 !/.extra
