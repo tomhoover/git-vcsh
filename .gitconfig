@@ -78,26 +78,24 @@
 		fi \
 	}; f"
 
-# what it says -- undo the last commit
-undo-commit = reset HEAD~
+    # what it says -- undo the last commit
+    undo-commit = reset HEAD~
 
-# various git diff commands
-dom = diff origin/master
-dum = diff upstream/master
-dom-st = diff --name-status origin/master
-dum-st = diff --name-status upstream/master
+    # various git diff commands
+    dom = diff origin/master
+    dum = diff upstream/master
+    dom-st = diff --name-status origin/master
+    dum-st = diff --name-status upstream/master
+
+    # create raw patches (i.e. override diff-so-fancy)
+    #    use as 'git patch > changes.patch'
+    patch = --no-pager diff --no-color
 
 [apply]
-
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
 [core]
-
-    # Use custom `.gitignore` and `.gitattributes`
-    # excludesfile = ~/.gitignore
-    # attributesfile = ~/.gitattributes
-
     # use default location $XDG_CONFIG_HOME/git/[ignore|attributes] OR $HOME/.config/git/[ignore|attributes],
     #   instead of:
     # excludesfile = ~/.gitignore
@@ -117,29 +115,36 @@ dum-st = diff --name-status upstream/master
 	precomposeunicode = false
 
 	# thanks to cdunn2001 - see http://stackoverflow.com/questions/136178/git-diff-handling-long-lines
-	pager = less -eiFRSX
+    #pager = less -eiFRSX
+    #pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = diff-so-fancy | less --tabs=4 -eiFRSX
+
+#[pager]
+#    diff = diff-so-fancy | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '
 
 [color]
+    ui = auto
 
-	# Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
+[color "diff"]
+	meta = yellow
+	frag = magenta  # line info
+	old = red
+	new = green
+    whitespace = red reverse
+    commit = blue
+
+[color "diff-highlight"]
+    oldNormal = red
+    oldHighlight = red 52
+    newNormal = green
+    newHighlight = green 22
 
 [color "branch"]
-
 	current = yellow reverse
 	local = yellow
 	remote = green
 
-[color "diff"]
-
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
-
 [color "status"]
-
 	added = yellow
 	changed = green
 	untracked = cyan
