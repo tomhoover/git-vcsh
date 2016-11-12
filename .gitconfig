@@ -9,8 +9,11 @@
 	l = log --graph --pretty='%Cred%h%Creset %C(yellow)%d%Creset %s %Cblue[%an]%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	la = !git l --all
 
+	ci = commit
+	co = checkout
 	# View the current working tree status using the short format
 	s = status -s
+	st = status -s
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
