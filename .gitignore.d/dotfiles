@@ -5,6 +5,9 @@
 !/.colordiffrc
 !/.exports
 !/.functions
+!/.vimrc.local
+!/.vimrc.before.local
+!/.vimrc.bundles.local
 !/.zprofile
 !/.zshenv
 !/.zshrc
