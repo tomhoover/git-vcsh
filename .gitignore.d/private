@@ -9,3 +9,6 @@
 /.config/git/ignore
 /.config/liquidpromptrc
 !/.extra
+!/.ssh
+!/.ssh/*
+/.ssh/known_hosts
