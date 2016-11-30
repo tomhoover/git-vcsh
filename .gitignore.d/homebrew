@@ -1,4 +1,5 @@
 *
+!/.Brewfile
 !/.config
 !/.config/homebrew
 !/.config/homebrew/brew.installed
