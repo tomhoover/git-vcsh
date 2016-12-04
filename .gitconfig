@@ -94,6 +94,12 @@
     #    use as 'git patch > changes.patch'
     patch = --no-pager diff --no-color
 
+    travis = !"git commit --allow-empty -m 're-run travis-ci'; git push"
+
+    track = update-index --no-assume-unchanged
+    untrack = update-index --assume-unchanged
+    ls-untracked = !"git ls-files -v | grep '^[[:lower:]]'"
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
