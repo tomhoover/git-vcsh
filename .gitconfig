@@ -100,6 +100,9 @@
     untrack = update-index --assume-unchanged
     ls-untracked = !"git ls-files -v | grep '^[[:lower:]]'"
 
+    # rename branches created by github/hub to match normal branch name convention
+    hub-rename = !"git remote rename origin upstream && git remote rename tomhoover origin"
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
