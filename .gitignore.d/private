@@ -1,6 +1,8 @@
 *
 !/.SECRETS
 !/.boto
+!/.cache
+!/.cache/clean-github-pr-creds
 !/.config
 !/.config/*
 !/.config/git
