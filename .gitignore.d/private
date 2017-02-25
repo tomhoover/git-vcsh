@@ -13,6 +13,7 @@
 !/.config/hosts/*
 /.config/liquidpromptrc
 !/.extra
+!/.rclone.conf
 !/.ssh
 !/.ssh/*
 /.ssh/known_hosts
