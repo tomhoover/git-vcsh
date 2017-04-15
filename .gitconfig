@@ -224,3 +224,5 @@
 
 #[commit]
 #	gpgSign = true
+[credential]
+	helper = osxkeychain
