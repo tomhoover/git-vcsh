@@ -1,6 +1,0 @@
-*
-!/.Brewfile
-!/.config
-!/.config/homebrew
-!/.config/homebrew/brew.installed
-!/.config/homebrew/cask.installed
