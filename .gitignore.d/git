@@ -1,8 +1,8 @@
 *
 !/.config
 !/.config/git
-!/.config/git/*
-/.config/git/user
+!/.config/git/attributes
+!/.config/git/ignore
 !/.gitconfig
 !/.gitignore.d
-!/.gitignore.d/*
+!/.gitignore.d/git
