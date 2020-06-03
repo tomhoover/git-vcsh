@@ -103,6 +103,9 @@
     # rename branches created by github/hub to match normal branch name convention
     hub-rename = !"git remote rename origin upstream && git remote rename tomhoover origin"
 
+    # fetch all remotes
+    f = !"git fetch --all --prune"
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
@@ -175,7 +178,7 @@
     # Include summaries of merged commits in newly created merge commit messages
     log = true
     # Use the OS X graphical three-way merge tool for graphical merges.
-    tool = opendiff
+	tool = p4merge
 [mergetool]
     # Don't prompt before opening the merge tool.
     prompt = false
@@ -224,5 +227,6 @@
 
 #[commit]
 #	gpgSign = true
+
 [credential]
 	helper = osxkeychain
