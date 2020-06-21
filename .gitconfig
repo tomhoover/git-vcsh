@@ -179,6 +179,8 @@
     log = true
     # Use the OS X graphical three-way merge tool for graphical merges.
 	tool = p4merge
+	ff = only
+
 [mergetool]
     # Don't prompt before opening the merge tool.
     prompt = false
@@ -230,3 +232,6 @@
 
 [credential]
 	helper = osxkeychain
+
+[pull]
+	ff = only
