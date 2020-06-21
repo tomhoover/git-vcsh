@@ -1,5 +1,4 @@
 [alias]
-
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	#l = log --pretty=oneline -n 20 --graph --abbrev-commit
 	# thanks to Pete Doherty - see http://gitready.com/intermediate/2009/03/04/pick-out-individual-commits.html
@@ -165,12 +164,10 @@
 	untracked = cyan
 
 [diff]
-
 	# Detect copies as well as renames
 	renames = copies
 
 [help]
-
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
 
@@ -188,35 +185,31 @@
     keepBackup = false
     # Don't keep the merge tool temporary input/output files.
     keepTemporaries = false
+
 [mergetool "opendiff"]
     # Use a script to setup opendiff correctly for Git merges.
     path = git-mergetool-opendiff
 
 [push]
-
 	default = simple
 
 # URL shorthands
 
 [url "git@github.com:"]
-
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
 	pushInsteadOf = "https://github.com/"
 
 [url "git://github.com/"]
-
 	insteadOf = "github:"
 
 [url "git@gist.github.com:"]
-
 	insteadOf = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 
 [url "git://gist.github.com/"]
-
 	insteadOf = "gist:"
 
 [include]
@@ -235,3 +228,6 @@
 
 [pull]
 	ff = only
+
+[user]
+	useConfigOnly = true
