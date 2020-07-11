@@ -91,7 +91,7 @@
 
     # create raw patches (i.e. override diff-so-fancy)
     #    use as 'git patch > changes.patch'
-    patch = --no-pager diff --no-color
+    patch = !git --no-pager diff --no-color
 
     travis = !"git commit --allow-empty -m 're-run travis-ci'; git push"
 
@@ -129,8 +129,8 @@
 	precomposeunicode = false
 
 	# thanks to cdunn2001 - see http://stackoverflow.com/questions/136178/git-diff-handling-long-lines
-    #pager = less -eiFRSX
-    #pager = diff-so-fancy | less --tabs=4 -RFX
+    # pager = less -eiFRSX
+    # pager = diff-so-fancy | less --tabs=4 -RFX
     pager = diff-so-fancy | less --tabs=4 -eiFRSX
 
 #[pager]
