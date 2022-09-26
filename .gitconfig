@@ -233,3 +233,5 @@
 
 [user]
 	useConfigOnly = true
+[init]
+	defaultBranch = master
