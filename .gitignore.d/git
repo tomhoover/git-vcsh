@@ -3,6 +3,9 @@
 !/.config/git
 !/.config/git/attributes
 !/.config/git/ignore
+!/.config/git/template
+!/.config/git/template/hooks
+!/.config/git/template/hooks/*
 !/.gitconfig
 !/.gitignore.d
 !/.gitignore.d/git

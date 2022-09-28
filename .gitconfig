@@ -235,3 +235,4 @@
 	useConfigOnly = true
 [init]
 	defaultBranch = master
+	templateDir = /Users/tom/.config/git/template
