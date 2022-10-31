@@ -160,6 +160,9 @@
     changed = green
     untracked = cyan
 
+[credential]
+    helper = osxkeychain
+
 [diff]
     # Detect copies as well as renames
     renames = copies
@@ -167,6 +170,10 @@
 [help]
     # Automatically correct and execute mistyped commands
     autocorrect = 1
+
+[init]
+    defaultBranch = master
+    templateDir = /Users/tom/.config/git/template
 
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
@@ -187,10 +194,11 @@
     # Use a script to setup opendiff correctly for Git merges.
     path = git-mergetool-opendiff
 
+[pull]
+    ff = only
+
 [push]
     default = simple
-
-# URL shorthands
 
 [url "git@github.com:"]
     insteadOf = "gh:"
@@ -209,26 +217,17 @@
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
 
+[user]
+    useConfigOnly = true
+
 [include]
     path = .config/git/user
+
+#[commit]
+#    gpgSign = true
 
 #[pager]
 #    diff = diff-so-fancy | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '
 #    log = diff-highlight | less
 #    show = diff-highlight | less
 #    diff = diff-highlight | less
-
-#[commit]
-#    gpgSign = true
-
-[credential]
-    helper = osxkeychain
-
-[pull]
-    ff = only
-
-[user]
-    useConfigOnly = true
-[init]
-    defaultBranch = master
-    templateDir = /Users/tom/.config/git/template
