@@ -175,6 +175,9 @@
     defaultBranch = master
     templateDir = /Users/tom/.config/git/template
 
+[interactive]
+    diffFilter = diff-so-fancy --patch
+
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
