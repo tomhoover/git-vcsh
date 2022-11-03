@@ -1,4 +1,6 @@
-[alias]
+# vim: set fdm=marker:
+
+[alias] ; {{{
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     #l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -105,12 +107,14 @@
 
     # fetch all remotes
     f = !"git fetch --all --prune"
+; }}}
 
-[apply]
+[apply] ; {{{
     # Detect whitespace errors when applying a patch
     whitespace = fix
+; }}}
 
-[core]
+[core] ; {{{
     # use default location $XDG_CONFIG_HOME/git/[ignore|attributes] OR $HOME/.config/git/[ignore|attributes],
     #   instead of:
     # excludesfile = ~/.gitignore
@@ -136,56 +140,73 @@
 
     # disabled per https://www.edwardthomson.com/blog/advent_day_1_gitattributes_for_text_files.html
     # autocrlf = input
+; }}}
 
-[color]
+[color] ; {{{
     ui = auto
-[color "branch"]
+
+[color "branch"] ; {{{
     current = yellow reverse
     local = yellow
     remote = green
-[color "diff"]
+; }}}
+
+[color "diff"] ; {{{
     meta = yellow
     frag = magenta              # line info
     old = red
     new = green
     whitespace = red reverse
     commit = blue
-[color "diff-highlight"]
+; }}}
+
+[color "diff-highlight"] ; {{{
     oldNormal = red
     oldHighlight = red 52
     newNormal = green
     newHighlight = green 22
-[color "status"]
+; }}}
+
+[color "status"] ; {{{
     added = yellow
     changed = green
     untracked = cyan
+; }}}
 
-[credential]
+; }}}
+
+[credential] ; {{{
     helper = osxkeychain
+; }}}
 
-[diff]
+[diff] ; {{{
     # Detect copies as well as renames
     renames = copies
+; }}}
 
-[help]
+[help] ; {{{
     # Automatically correct and execute mistyped commands
     autocorrect = 1
+; }}}
 
-[init]
+[init] ; {{{
     defaultBranch = master
     templateDir = /Users/tom/.config/git/template
+; }}}
 
-[interactive]
+[interactive] ; {{{
     diffFilter = diff-so-fancy --patch
+; }}}
 
-[merge]
+[merge] ; {{{
     # Include summaries of merged commits in newly created merge commit messages
     log = true
     # Use the OS X graphical three-way merge tool for graphical merges.
     tool = p4merge
     ff = only
+; }}}
 
-[mergetool]
+[mergetool] ; {{{
     # Don't prompt before opening the merge tool.
     prompt = false
     # Don't keep backups of the merge tool inputs.
@@ -193,39 +214,51 @@
     # Don't keep the merge tool temporary input/output files.
     keepTemporaries = false
 
-[mergetool "opendiff"]
+[mergetool "opendiff"] ; {{{
     # Use a script to setup opendiff correctly for Git merges.
     path = git-mergetool-opendiff
+; }}}
 
-[pull]
+; }}}
+
+[pull] ; {{{
     ff = only
+; }}}
 
-[push]
+[push] ; {{{
     default = simple
+; }}}
 
-[url "git@github.com:"]
+[url "git@github.com:"] ; {{{
     insteadOf = "gh:"
     pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"
     pushInsteadOf = "https://github.com/"
+; }}}
 
-[url "git://github.com/"]
+[url "git://github.com/"] ; {{{
     insteadOf = "github:"
+; }}}
 
-[url "git@gist.github.com:"]
+[url "git@gist.github.com:"] ; {{{
     insteadOf = "gst:"
     pushInsteadOf = "gist:"
     pushInsteadOf = "git://gist.github.com/"
+; }}}
 
-[url "git://gist.github.com/"]
+[url "git://gist.github.com/"] ; {{{
     insteadOf = "gist:"
+; }}}
 
-[user]
+[user] ; {{{
     useConfigOnly = true
+; }}}
 
-[include]
+[include] ; {{{
     path = .config/git/user
+; }}}
 
+; superceded stuff {{{
 #[commit]
 #    gpgSign = true
 
@@ -234,3 +267,4 @@
 #    log = diff-highlight | less
 #    show = diff-highlight | less
 #    diff = diff-highlight | less
+; }}}
