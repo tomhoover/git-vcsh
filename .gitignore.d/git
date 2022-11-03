@@ -2,6 +2,7 @@
 !/.config
 !/.config/git
 !/.config/git/attributes
+!/.config/git/config
 !/.config/git/ignore
 !/.config/git/template
 !/.config/git/template/hooks
