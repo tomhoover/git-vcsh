@@ -191,7 +191,7 @@
 
 [init] ; {{{
     defaultBranch = master
-    templateDir = /Users/tom/.config/git/template
+    templateDir = ~/.config/git/template
 ; }}}
 
 [interactive] ; {{{
@@ -255,7 +255,7 @@
 ; }}}
 
 [include] ; {{{
-    path = .config/git/user
+    path = ~/.config/git/user
 ; }}}
 
 ; superceded stuff {{{
