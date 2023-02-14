@@ -1,5 +1,4 @@
-### Automatically created by GitHub for Mac
-
+# Automatically created by GitHub for Mac
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -17,7 +16,3 @@ Temporary Items
 # Direnv files
 .direnv/
 .envrc
-
-# Editor specific files and folders
-.idea
-.vscode
