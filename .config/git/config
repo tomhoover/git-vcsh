@@ -229,6 +229,11 @@
     default = simple
 ; }}}
 
+[url "ssh://git@gitea:2222/"] ; {{{
+    insteadOf = "gitea:"
+    pushInsteadOf = "http://gitea:3000/"
+; }}}
+
 [url "git@github.com:"] ; {{{
     insteadOf = "gh:"
     pushInsteadOf = "github:"
