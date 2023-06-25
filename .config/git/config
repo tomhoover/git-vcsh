@@ -33,7 +33,8 @@
     ca = !git add -A && git commit -av
 
     # Switch to a branch, creating it if necessary
-    go = "!f() { git checkout -b \"$@\" 2> /dev/null || git checkout \"$@\"; }; f"
+    # go = "!f() { git checkout -b \"$@\" 2> /dev/null || git checkout \"$@\"; }; f"
+    go = "!f() { git switch -c \"$@\" 2> /dev/null || git switch \"$@\"; }; f"
 
     # Show verbose output about tags, branches or remotes
     tags = tag -l
