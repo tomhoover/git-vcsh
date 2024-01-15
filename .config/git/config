@@ -235,6 +235,11 @@
     pushInsteadOf = "http://gitea:3000/"
 ; }}}
 
+[url "ssh://git@gitea.t0m.us:2222/"] ; {{{
+    insteadOf = "gitea.t0m.us:"
+    pushInsteadOf = "http://gitea.t0m.us:3000/"
+; }}}
+
 [url "git@github.com:"] ; {{{
     insteadOf = "gh:"
     pushInsteadOf = "github:"
