@@ -107,7 +107,13 @@
     hub-rename = !"git remote rename origin upstream && git remote rename tomhoover origin"
 
     # fetch all remotes
-    f = !"git fetch --all --prune"
+    f = fetch --all --prune
+
+    # https://stackoverflow.com/questions/957928/is-there-a-way-to-get-the-git-root-directory-in-one-command
+    root = rev-parse --show-toplevel
+    # so I can do things like 'git exec make'. This works because shell aliases are always executed in the top-level directory.
+    exec = "!exec "
+
 ; }}}
 
 [apply] ; {{{
