@@ -285,3 +285,5 @@
 #    show = diff-highlight | less
 #    diff = diff-highlight | less
 ; }}}
+[hub]
+	protocol = https
