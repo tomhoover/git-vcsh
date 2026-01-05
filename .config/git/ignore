@@ -39,9 +39,13 @@ Thumbs.db
 ehthumbs.db
 ######################### end ##########################
 
-# Direnv files
+# direnv files
 .direnv/
 .envrc
+
+# mise files
+.mise.local.toml
+mise.local.toml
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,vim,zsh
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,vim,zsh
