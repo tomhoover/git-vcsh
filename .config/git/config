@@ -15,7 +15,8 @@
     co = checkout
     # View the current working tree status using the short format
     s = status -s
-    st = status -s
+    # Show the branch and tracking info even in short-format
+    st = status -sb
 
     # Show the diff between the latest commit and the current state
     d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
