@@ -116,6 +116,25 @@
     # so I can do things like 'git exec make'. This works because shell aliases are always executed in the top-level directory.
     exec = "!exec "
 
+    # https://www.tobymackenzie.com/blog/2023/12/27/bumping-version-tags-with-git/
+    versionbump = !"cd -- ${GIT_PREFIX:-.} && V=$(git tag --sort=-version:refname --list \"v[0-9]*\" | head -n 1) \
+        && if [ -z \"$V\" ]; then V='v0.0.0'; fi \
+        && if [ \"$1\" == '.' ] || [ \"$1\" == 'patch' ]; then \
+                awkV='{OFS=\".\"; $NF+=1; print $0}'; \
+            elif [ \"$1\" == '..' ] || [ \"$1\" == 'minor' ]; then \
+                awkV='{OFS=\".\"; $2+=1; $3=0; print $0}'; \
+            elif [ \"$1\" == '...' ] || [ \"$1\" == 'major' ]; then \
+                V="${V:1}" && \
+                awkV='{OFS=\".\"; $1+=1; $2=0; $3=0; print \"v\"$0}'; \
+            else echo 'No version specified.  Specify one of patch, minor, or major.'; exit 1; \
+        fi \
+        && if [ -z \"$awkV\" ]; then exit 1; else newV=$(echo $V | awk -F. \"$awkV\"); fi \
+        && read -r -p \"Do you want to tag with version ${newV}?: \" tmp \
+        && ([[ $tmp =~ ^[Yy] ]] && git tag \"${newV}\" \"${@:2}\") && echo \"Tagged version ${newV}\" \
+        || exit 1 #"
+    bump = !git versionbump
+    vb = !git versionbump
+
 ; }}}
 
 [apply] ; {{{
