@@ -4,6 +4,8 @@
 !/.config/git/attributes
 !/.config/git/config
 !/.config/git/ignore
+!/.config/git/sample-hooks
+!/.config/git/sample-hooks/*
 !/.config/git/template
 !/.config/git/template/hooks
 !/.config/git/template/hooks/*
