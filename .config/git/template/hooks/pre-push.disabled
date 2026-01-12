@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Check connectivity for each remote being pushed.
+while read local_ref local_sha remote_ref remote_sha
+do
+    # Get the URL for the current remote being pushed to
+    remote_name=$(git remote get-url --push "$remote_ref" 2>/dev/null | sed 's|^.*://||; s|/.*$||')
+
+    if [ -n "$remote_name" ]; then
+        echo "Checking host connectivity for $remote_name..."
+
+        # Use a short timeout to prevent long hangs on unreachable hosts
+        if timeout 1s git ls-remote -q "$remote_ref" >/dev/null 2>&1; then
+            echo "Connectivity check passed for $remote_name."
+        else
+            echo "Error: Host for '$remote_ref' is unreachable or the repository does not exist." >&2
+            exit 1
+        fi
+    fi
+done
+exit 0
