@@ -134,6 +134,7 @@
         || exit 1 #"
     bump = !git versionbump
     vb = !git versionbump
+    b = !git versionbump
 
 # https://www.tobymackenzie.com/blog/2021/12/07/git-info-alias/
     info = !"cd -- ${GIT_PREFIX:-.} && ( \
