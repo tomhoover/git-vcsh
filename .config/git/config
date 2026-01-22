@@ -74,7 +74,7 @@
     # Remove branches that have already been merged with current branch
     # a.k.a. ‘delete merged’
     # dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-    dm = "!git branch --merged | grep -v '\\*' | grep -Ev '[/ ]+(main|master)$' | xargs --no-run-if-empty -n 1 git branch -d"
+    dm = "!git branch --merged | grep -v '\\*' | grep -Ev '[/ ]+(dev|main|master)$' | xargs --no-run-if-empty -n 1 git branch -d"
 
     # List contributors with number of commits
     contributors = shortlog --summary --numbered
