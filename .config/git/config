@@ -4,11 +4,16 @@
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     #l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-    # thanks to Pete Doherty - see http://gitready.com/intermediate/2009/03/04/pick-out-individual-commits.html
-    #ll = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-
     # thanks to Ted Naleid - https://github.com/tednaleid/understanding-git
-    l = log --graph --pretty='%Cred%h%Creset %C(yellow)%d%Creset %s %Cblue[%an]%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    #l = log --graph --pretty='%Cred%h%Creset %C(yellow)%d%Creset %s %Cblue[%an]%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+    # thanks to Slipp D Thompson - https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
+    #l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset) - %C(bold green)(%ar)%C(reset)'
+    #l = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset) - %C(green)(%ar)%C(reset)'
+    #l = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) %s %C(dim white)- %an%C(reset)%C(auto)%d%C(reset) - %C(green)(%ar)%C(reset)'
+    l = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) %s %C(dim white)- %an%C(reset)%C(auto)%d%C(reset) %C(green)(%ar)%C(reset)'
+
+    #l = log --graph --oneline --decorate
     la = !git l --all
 
     ci = commit
