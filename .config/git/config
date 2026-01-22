@@ -153,6 +153,9 @@
         ) | less -FrSX"
     i = info
 
+# interim checkin && bypass git hooks
+    w = commit -m 'wip' --no-verify
+
 ; }}}
 
 [apply] ; {{{
