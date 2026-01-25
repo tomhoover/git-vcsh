@@ -3,12 +3,12 @@
 # ID: 138fd403232d2ddd5efb44317e38bf03
 
 echo
-echo "pre-commit"
+echo "pre-push"
 echo
 
 # start templated
 INSTALL_PYTHON=$HOME/.local/share/mise/shims/pre-commit
-ARGS=(hook-impl --config=.pre-commit-config.yaml --hook-type=pre-commit --skip-on-missing-config)
+ARGS=(hook-impl --config=.pre-commit-config.yaml --hook-type=pre-push --skip-on-missing-config)
 # end templated
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
