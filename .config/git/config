@@ -150,7 +150,10 @@
         [[ $(git tag -l) ]] && echo '==tags' && (git for-each-ref --color --count 5 --sort -creatordate --format='%(color:bold green)%(refname:short)%(color:no-bold brightyellow) %(if)%(*objectname)%(then)%(*objectname:short)%(else)%(objectname:short)%(end)%(color:reset) %(creatordate:short)' refs/tags) ; \
         [[ $(git submodule status) ]] && echo '==submodules' && git submodule status \
         ) | less -FrSX"
-    i = info
+    i = !git info
+
+    vcsh = !"vcsh crontab pull; vcsh dotfiles pull; vcsh git pull; vcsh mr pull; vcsh private pull"
+    v = vcsh
 
 # interim checkin && bypass git hooks
     w = commit -m 'wip' --no-verify
